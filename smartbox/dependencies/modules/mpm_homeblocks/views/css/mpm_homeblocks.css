@@ -1,0 +1,67 @@
+.homeBanner{
+  width: 100%;
+  float: left;
+  margin: 20px 0px ;
+}
+.homeBannerContent li .item_block_content{
+  padding: 20px;
+  position: absolute;
+  z-index: 11;
+  top: 10px;
+  left: 10px;
+  width: calc(100% - 20px);
+}
+.homeBannerContent li .item_block_img img{
+  max-width: 100%;
+}
+.homeBannerContent li{
+  float: left;
+  position: relative;
+}
+.item_block_img{
+  position: relative;
+}
+.item_block_img:before{
+  position: absolute;
+  z-index: 2;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  background: rgba(255,255,255,.8) none repeat scroll 0 0;
+  opacity: 0;
+  -webkit-transition: all 1s ease 0s;
+  -moz-transition: all 1s ease 0s;
+  -ms-transition: all 1s ease 0s;
+  -o-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+}
+.homeBannerContent li:hover .item_block_img:before{
+  opacity: 0.4;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+}
+.homeBannerContent li:hover .item_block_img img{
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+}
+.homeBannerContent li .item_block_img{
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.homeBannerContent li .item_block_img img{
+  max-width: 100%;
+  transition: all 600ms ease 0s;
+  -webkit-transition: all 600ms ease 0s;
+  -moz-transition: all 600ms ease 0s;
+  -ms-transition: all 600ms ease 0s;
+  -o-transition: all 600ms ease 0s;
+}

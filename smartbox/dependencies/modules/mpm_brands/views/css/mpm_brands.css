@@ -1,0 +1,33 @@
+.container_manufacturer{
+  width: 100%;
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 0px;
+  overflow: hidden;
+  background-color: #efefee;
+  padding: 30px 0px;
+}
+.manufacturer-list-homepage .manufacturer-item{
+  float: left;
+  padding: 10px;
+  text-align: center;
+}
+.container_manufacturer img{
+  margin: 0 auto;
+  max-width: 100%;
+}
+.manufacturer-item .title{
+  color: #2f3034;
+  font-size: 16px;
+  text-transform: uppercase;
+  display: block;
+  padding-top: 10px;
+}
+.manufacturer-item .title:hover{
+  color: #3498db;
+}
+.manufacturer-list-homepage{
+  margin-bottom: 0px;
+}
+

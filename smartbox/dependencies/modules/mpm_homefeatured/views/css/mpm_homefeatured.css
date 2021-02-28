@@ -1,0 +1,16 @@
+.block_featured_slider{
+  width: 100%;
+  float: left;
+  clear: both;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+
+
+
+
+

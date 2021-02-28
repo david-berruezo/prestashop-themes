@@ -1,0 +1,97 @@
+#blockcart-modal {
+  color: #414141;
+}
+#blockcart-modal .modal-body {
+  padding: 20px 40px 35px 40px;
+  background-color: #ffffff;
+}
+#blockcart-modal .modal-body .divide-right span {
+  display: inline-block;
+  margin-bottom: .3125rem
+}
+#blockcart-modal .modal-dialog {
+  max-width: 1140px;
+  width: 100%
+}
+#blockcart-modal .modal-header{
+  border: none;
+  background-color: #ffffff;
+}
+#blockcart-modal .product-image {
+  max-width: 100%;
+}
+#blockcart-modal .modal-title {
+  border-radius: 4px;
+  position: relative;
+  padding: 10px 20px;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: #000000;
+  font-weight: bold;
+  width: calc(100% - 25px);
+  text-transform: uppercase;
+}
+#blockcart-modal .modal-title i.material-icons {
+  margin-right: 1.875rem
+}
+.cart-products-count-modal,
+#blockcart-modal .product-name {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 1px solid #d6d4d4;
+  padding-bottom: 10px;
+  margin-bottom: 17px;
+}
+#blockcart-modal .cart-products-count {
+  font-size: 1.125rem
+}
+#blockcart-modal .cart-content {
+  margin-top: 35px;
+  padding-left: 0px;
+}
+.cart-products-item-line{
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+#blockcart-modal .cart-content-btn{
+  margin-top: 20px;
+}
+#blockcart-modal .product-image-block {
+  border: 1px solid #e6e7e8;
+  margin-top: 0px;
+}
+#blockcart-modal .cart-content-img-block{
+  float: left;
+  width: 250px;
+}
+#blockcart-modal .cart-content-total-block{
+  float: left;
+  width: calc(100% - 250px);
+  padding-left: 50px;
+}
+#blockcart-modal .cart-content .cart-content-btn {
+  display: inline-flex
+}
+#blockcart-modal .cart-content .cart-content-btn button {
+  margin-right: .3125rem
+}
+#blockcart-modal .divide-right {
+  border-right: 1px solid #acaaa6
+}
+#blockcart-modal .modal-header button{
+  outline: none;
+  margin-top: -10px;
+}
+#blockcart-modal .modal-header button span{
+  font-size: 37px;
+}
+#blockcart-modal .modal-header button:hover span{
+  color: #fd0c51 !important;
+}
+#blockcart-modal .modal-header button:hover{
+  opacity: 1;
+}

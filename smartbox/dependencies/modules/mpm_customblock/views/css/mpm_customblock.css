@@ -1,0 +1,39 @@
+.customblock{
+  width: 100%;
+  float: left;
+  margin: 20px 0px;
+  padding: 10px 0px;
+  clear: both;
+  border-bottom: 1px solid #dadada;
+}
+.custom-list-item{
+  float: left;
+  padding: 10px;
+  display: block;
+  width: 25%;
+  text-align: center;
+  border-left: 1px solid #dadada;
+}
+.custom-list-item .custom-item-title{
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+}
+
+.custom-list-item .custom-item-description{
+  font-family: Lato;
+  font-size: 14px;
+  color: #949496;
+}
+.custom-list-item-0{
+  border: none !important;
+}
+.custom-item-img{
+  display: inline-block;
+}
+.custom-item-title{
+  display: inline-block;
+}

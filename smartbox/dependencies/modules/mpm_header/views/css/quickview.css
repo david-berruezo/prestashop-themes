@@ -1,0 +1,58 @@
+.quickview .modal-dialog {
+  width: calc(100% - 30px);
+  max-width: 64rem;
+}
+.quickview .modal-content {
+  background: #fff;
+  min-height: 28.125rem;
+}
+.quickview .arrows{
+  height: 450px;
+}
+.js-arrows a {
+  height: 50px;
+  width: 50px;
+  display: block;
+  padding: 1px 0px 5px 0px;
+  cursor: pointer;
+}
+.modal-arrow-down {
+  position: absolute;
+  left: -13px;
+  bottom: -32px;
+}
+.modal-arrow-up {
+  top: -32px;
+  left: -13px;
+  position: absolute;
+}
+
+.js-arrows i {
+  font-size: 50px;
+  color: #3498db;
+}
+.js-arrows a:hover i {
+  color: #048096;
+}
+.quickview .arrows .arrow-up {
+   margin-top: 0px;
+}
+.quickview .arrows .arrow-down {
+  bottom: 0px;
+}
+.quickview  .modal-header button{
+  position: absolute;
+  right: 10px;
+  outline: none;
+  z-index: 22;
+  margin-top: -8px;
+}
+.quickview  .modal-header button span{
+  font-size: 30px;
+}
+.quickview  .modal-header button:hover span{
+  color: #fd0c51 !important;
+}
+.quickview  .modal-header button:hover{
+  opacity: 1;
+}

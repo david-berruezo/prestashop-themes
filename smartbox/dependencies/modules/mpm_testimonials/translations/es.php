@@ -1,0 +1,30 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{mpm_testimonials}prestashop>mpm_testimonials_f4c58e4051bc2fd7daeaf8aa36aa7069'] = 'Testimonials on homepage';
+$_MODULE['<{mpm_testimonials}prestashop>mpm_testimonials_248ea1bb9da8f620a6cc61935c4f1c9d'] = 'Testimonials block on homepage.';
+$_MODULE['<{mpm_testimonials}prestashop>mpm_testimonials_876f23178c29dc2552c0b48bf23cd9bd'] = '¿Seguro que quieres desinstalar?';
+$_MODULE['<{mpm_testimonials}prestashop>admintestimonialscontroller_d3b206d196cd6be3a2764c1fb90b200f'] = 'Eliminar selección';
+$_MODULE['<{mpm_testimonials}prestashop>admintestimonialscontroller_e25f0ecd41211b01c83e5fec41df4fe7'] = '¿Eliminar los elementos seleccionados?';
+$_MODULE['<{mpm_testimonials}prestashop>admintestimonialscontroller_b718adec73e04ce3ec720dd11a06a308'] = 'ID';
+$_MODULE['<{mpm_testimonials}prestashop>admintestimonialscontroller_b78a3223503896721cca1303f776159b'] = 'Título';
+$_MODULE['<{mpm_testimonials}prestashop>admintestimonialscontroller_86754577897acfb25deb69039d49d9a7'] = 'Mostrados';
+$_MODULE['<{mpm_testimonials}prestashop>admintestimonialscontroller_52f5e0bc3859bc5f5e25130b6c7e8881'] = 'Posición';
+$_MODULE['<{mpm_testimonials}prestashop>admintestimonialscontroller_7b6e7f81d1c260b7068ca82b91eb90a7'] = 'Añadir fecha';
+$_MODULE['<{mpm_testimonials}prestashop>admintestimonialscontroller_19fb21d55a90e1c8d1d88cdcc8becbda'] = 'displayHomeContent1';
+$_MODULE['<{mpm_testimonials}prestashop>admintestimonialscontroller_940598f5e00b8924dae0d72aa03542bb'] = 'displayHomeContent2';
+$_MODULE['<{mpm_testimonials}prestashop>admintestimonialscontroller_d0c6b51eb278a01ec6df0dfb6a5b6320'] = 'displayHomeContent3';
+$_MODULE['<{mpm_testimonials}prestashop>admintestimonialscontroller_5ed5cbf5b35713c3951dfc84c09be952'] = 'displayHomeContent4';
+$_MODULE['<{mpm_testimonials}prestashop>admintestimonialscontroller_cecece906a89a2ea0af8ef6de320aa2b'] = 'displayHomeContent5';
+$_MODULE['<{mpm_testimonials}prestashop>admintestimonialscontroller_f4f70727dc34561dfde1a3c529b6205c'] = 'Ajustes';
+$_MODULE['<{mpm_testimonials}prestashop>admintestimonialscontroller_b9b371458ab7c314f88b81c553f6ce51'] = 'Hook';
+$_MODULE['<{mpm_testimonials}prestashop>admintestimonialscontroller_c9cc8cce247e49bae79f15173ce97354'] = 'Guardar';
+$_MODULE['<{mpm_testimonials}prestashop>admintestimonialscontroller_4d3d769b812b6faa6b76e1a8abaece2d'] = 'Activar';
+$_MODULE['<{mpm_testimonials}prestashop>admintestimonialscontroller_93cba07454f06a4a960172bbd6e2a435'] = 'Sí';
+$_MODULE['<{mpm_testimonials}prestashop>admintestimonialscontroller_bafd7322c6e97d25b6299b5d6fe8920b'] = 'No';
+$_MODULE['<{mpm_testimonials}prestashop>admintestimonialscontroller_792744786ed30c5623dd1cf0c16f4ffe'] = 'Seleccione un archivo';
+$_MODULE['<{mpm_testimonials}prestashop>admintestimonialscontroller_b5a7adde1af5c87d7fd797b6245c2a39'] = 'Descripción';
+$_MODULE['<{mpm_testimonials}prestashop>admintestimonialscontroller_6252c0f2c2ed83b7b06dfca86d4650bb'] = 'Caracteres inválidos:';
+$_MODULE['<{mpm_testimonials}prestashop>admintestimonialscontroller_9ea67be453eaccf020697b4654fc021a'] = 'Guardar y permanecer';
+$_MODULE['<{mpm_testimonials}prestashop>customblock_13ea583f6474cdce6c0c9b289b652ffe'] = 'Testimonios';

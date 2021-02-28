@@ -1,0 +1,33 @@
+.container_supplier{
+  width: 100%;
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 0px;
+  overflow: hidden;
+  background-color: #efefee;
+  padding: 30px 0px;
+}
+.supplier-list-homepage .supplier-item{
+  float: left;
+  padding: 10px;
+  text-align: center;
+}
+.container_supplier img{
+  margin: 0 auto;
+  max-width: 100%;
+}
+.supplier-item .title{
+  color: #2f3034;
+  font-size: 16px;
+  text-transform: uppercase;
+  display: block;
+  padding-top: 10px;
+}
+.supplier-item .title:hover{
+  color: #3498db;
+}
+.supplier-list-homepage{
+  margin-bottom: 0px;
+}
+
