@@ -1,0 +1,338 @@
+//styles for category page
+.block-category-wrapper {
+  background: $gray-100;
+  padding: 50px 0;
+  .block-category {
+    display: flex;
+    .h1 {
+      margin-bottom: 15px;
+      @include media-breakpoint-down(sm) {
+        font-size: 30px;
+      }
+    }
+    .category-cover {
+      flex: 1 0 auto;
+      max-width: 30%;
+    }
+    > div {
+      flex: 1 1 auto;
+    }
+    .category-description {
+      color: $gray-500;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    #search_filters_wrapper {
+      padding-top: 50px;
+      margin-top: 30px;
+      border-top: 1px solid $gray-200;
+      #search_filters .row {
+        margin-left: -20px;
+        margin-right: -20px;
+        section.facet {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+#subcategories {
+  article {
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-right: 1px solid $gray-200;
+      height: 100%;
+    }
+    .subcategory-name {
+      display: inline-block;
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+  }
+}
+
+.product-list-top {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.products-selection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .sort-by-row {
+    padding: 0 15px;
+  }
+  #grid-list-buttons {
+    color: $gray-300;
+    li {
+      margin-right: 19px;
+      @include media-breakpoint-only(md) {
+        margin-right: 10px;
+      }
+    }
+    a {
+      display: block;
+      height: 38px;
+      font-size: 22px;
+      &:before {
+        line-height: 38px;
+      }
+      &:hover {
+        color: $black;
+      }
+      &.active {
+        color: $brand-primary;
+        cursor: default;
+      }
+      &#grid-large {
+        transform: scale(0.85);
+      }
+    }
+  }
+}
+
+.products-sort-order {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  > span {
+    margin-right: 15px;
+    flex-shrink: 0;
+    font-size: 12px;
+    font-weight: 300;
+  }
+  .custom-select {
+    width: 200px;
+  }
+  @media (max-width: 469px) {
+    flex: 1 1 220px;
+    > div, .custom-select {
+      width: 100%;
+    }
+  }
+}
+
+.pagination {
+  align-items: center;
+  margin-top: 20px;
+  @include media-breakpoint-up(md) {
+    margin-top: 35px;
+  }
+  .page-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    @include media-breakpoint-up(md) {
+      justify-content: flex-end;
+    }
+    li {
+      line-height: 0;
+      margin-left: 5px;
+      &:first-child, &:last-child, &:nth-child(2) {
+        margin-left: 0;
+      }
+      @include media-breakpoint-up(sm) {
+        margin-left: 10px;
+      }
+    }
+  }
+  a, .spacer {
+    display: block;
+    padding-left: 3px;
+    padding-right: 3px;
+    line-height: 30px;
+    color: $gray-400;
+    text-align: center;
+  }
+  a {
+    min-width: 34px;
+    border: 2px solid $gray-250;
+    transition: 0.3s all ease;
+    &:hover {
+      color: $gray-600;
+      border-color: $gray-500;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    a, .spacer {
+      font-size: 16px;
+      line-height: 46px;
+    }
+    a {
+      min-width: 50px;
+    }
+  }
+  .previous, .next {
+    padding: 0;
+    border: none;
+    min-width: 22px;
+    line-height: 30px;
+    color: $gray-800;
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+  .disabled {
+    text-decoration: none;
+    cursor: default;
+    color: $gray-400;
+    &:hover {
+      color: $gray-400;
+    }
+  }
+  .current a {
+    color: $gray-800;
+    border-color: $gray-800;
+    &:hover {
+      color: $gray-800;
+    }
+  }
+}
+
+.showing {
+  font-size: 12px;
+  font-weight: 300;
+  color: $gray-500;
+  padding: 10px;
+}
+
+//style for filter module
+section.facet {
+  min-width: 33.3333%;
+  flex-grow: 0;
+  @include media-breakpoint-up(lg) {
+    min-width: 20%;
+  }
+  .facet-title {
+    margin-bottom: 10px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 15px;
+    }
+  }
+  .facet-list {
+    position: relative;
+    padding-bottom: 1px;
+    margin-bottom: 30px;
+    li:not(.list-inline-item) {
+      margin-bottom: 11px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .custom-control {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .magnitude {
+        font-size: 12px;
+        color: $gray-400;
+      }
+    }
+    @include media-breakpoint-up(md) {
+      .nested-list {
+        position: absolute;
+        top: calc(100% - 1px);
+        left: -10px;
+        right: -10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        z-index: 5;
+        background: $gray-100;
+      }
+    }
+    .show-more-link {
+      display: inline-block;
+      font-size: 12px;
+      color: $brand-primary;
+      &:hover, &:focus {
+        color: $gray-800;
+      }
+      .more {
+        display: none;
+      }
+      &.collapsed {
+        .more {
+          display: block;
+        }
+        .hide {
+          display: none;
+        }
+      }
+    }
+  }
+  .slider-container {
+    max-width: 100%;
+  }
+}
+
+.active_filters {
+  ul {
+    display: block;
+    background: $gray-200;
+    padding: 10px 10px 0;
+    .filter-block {
+      box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
+      color: white;
+      margin-right: 7px;
+      margin-bottom: 10px;
+      background: $brand-primary;
+      padding: 5px 10px;
+      display: inline-block;
+      i {
+        color: white;
+        transition: 0.3s color ease;
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+.js-search-filters-clear-all {
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-width: 1px;
+  cursor: pointer;
+  transition: 0.3s color ease;
+  &:active, &:focus {
+    outline: none;
+  }
+  &:hover {
+    color: $brand-primary;
+  }
+}
+
+//styles for category tree module
+.block-categories {
+  .arrows {
+    .arrow-right {
+      cursor: pointer;
+      margin-left: 5px;
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+  }
+  .list-default .list-default {
+    padding-left: 20px;
+  }
+}

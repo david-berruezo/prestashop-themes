@@ -1,0 +1,147 @@
+.bg-dark {
+  color: $white;
+  a:hover {
+    color: $gray-300;
+  }
+  .list-default, [class^="list-default-"], [class*=" list-default-"] {
+    color: $gray-400;
+    a:hover {
+      color: $white;
+    }
+  }
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    color: inherit;
+  }
+  .form-control, .custom-select {
+    background-color: #1a1c22;
+    border-color: #1a1c22;
+    color: $gray-200;
+    &::placeholder {
+      color: $gray-500;
+    }
+    &:active, &:focus {
+      color: white;
+    }
+  }
+  .default-menu {
+    color: $white;
+    > ul > li {
+      > .sf-with-ul {
+        @include media-breakpoint-up(md) {
+          &:after {
+            color: $white;
+          }
+        }
+      }
+      &.sfHover > a, &.sfHoverForce > a, &.sfHover > .top-level-menu-li-span, &.sfHoverForce > .top-level-menu-li-span, > a:hover, > .top-level-menu-li-span:hover {
+        color: $gray-300;
+      }
+    }
+  }
+  .icon-toggle, .jxwishlist-link {
+    color: $white;
+    &:hover {
+      color: $gray-300;
+    }
+  }
+  .cart-preview a {
+    background-color: $white;
+  }
+  .block-contact a.mail {
+    color: $blue;
+    &:hover {
+      color: $white;
+    }
+  }
+  .block-social {
+    color: $gray-700;
+  }
+  .copyright {
+    color: #5E6069;
+  }
+  .stickUpTop.isStuck {
+    background-color: $gray-900;
+  }
+  [data-off-canvas] {
+    color: $body-color;
+  }
+  .newsletter-type-2, .newsletter-type-3 {
+    .block-newsletter .input-group .input-group-btn .btn {
+      background: none;
+      i {
+        transition: 0.3s color ease;
+      }
+      &:before {
+        display: none;
+      }
+      &:hover i {
+        color: $brand-primary;
+      }
+    }
+  }
+  .alert {
+    background: none;
+  }
+  .alert-danger {
+    color: #d22d2d;
+    border-color: #682121;
+  }
+}
+
+#footer {
+  .bg-dark {
+    h3 {
+      color: $white;
+    }
+  }
+}
+
+.bg-secondary {
+  color: $gray-450;
+  .language-selector, .currency-selector {
+    [data-toggle] {
+      color: $white;
+    }
+  }
+}
+
+.bg-secondary-2 {
+  background-color: #1a1c22 !important;
+  color: $gray-100;
+  .box {
+    color: inherit;
+    i {
+      color: #40434A;
+    }
+  }
+  .separator-list {
+    > * {
+      border-color: #35373D;
+    }
+  }
+}
+
+.bg-light {
+  color: $gray-400;
+  .list-default, [class^="list-default-"], [class*=" list-default-"] {
+    color: $gray-500;
+  }
+  .form-control {
+    background-color: $white;
+    border-color: $white;
+    &::placeholder {
+      color: $gray-400;
+    }
+  }
+  &.definition-list, .definition-list {
+    color: $black;
+    dl {
+      dd, dt {
+        background: white;
+        &:nth-of-type(even) {
+          background: $gray-100;
+        }
+      }
+    }
+  }
+}

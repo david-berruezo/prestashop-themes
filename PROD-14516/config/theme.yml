@@ -1,0 +1,345 @@
+name: PROD-14516
+display_name: Nextprest
+version: 1.0.0
+author:
+  name: Zemez
+  email: 
+  url: www.zemez.io
+meta:
+  compatibility:
+    from: 1.7.0.0
+    to: ~
+  available_layouts:
+    layout-full-width:
+      name: Full Width
+      description: No side columns, ideal for distraction-free pages such as product pages.
+    layout-both-columns:
+      name: Three Columns
+      description: One large central column and 2 side columns.
+    layout-left-column:
+      name: Two Columns, small left column
+      description: Two columns with a small left column
+    layout-right-column:
+      name: Two Columns, small right column
+      description: Two columns with a small right column
+
+assets:
+  css:
+    all:
+      -
+        id: font-awesome
+        path: ../_libraries/font-awesome/css/font-awesome.min.css
+        media: all
+        priority: 10
+      -
+        id: swiper
+        path: assets/css/swiper.min.css
+        media: all
+        priority: 10
+      -
+        id: modals
+        path: assets/css/modals.css
+        media: all
+        priority: 50
+      -
+        id: categories
+        path: assets/css/categories.css
+        media: all
+        priority: 50
+      -
+        id: product
+        path: assets/css/product.css
+        media: all
+        priority: 50
+  js:
+    all:
+      -
+        id: swiper
+        path: assets/js/swiper.min.js
+        media: all
+        priority: 10
+      -
+        id: modals
+        path: assets/js/product-modals.js
+        media: all
+        priority: 50
+    product:
+      -
+        id: product
+        path: assets/js/product.js
+        media: all
+        priority: 50
+
+global_settings:
+  configuration:
+    PS_IMAGE_QUALITY: png
+  modules:
+    to_enable:
+      - jxblog
+      - jxblogcomment
+      - jxblogpostposts
+      - jxblogpostproducts
+      - jxcategoryproducts
+      - jxcompareproduct
+      - jxdaydeal
+      - jxfeaturedposts
+      - jxgooglemap
+      - jxheaderaccount
+      - jxlookbook
+      - jxmegalayout
+      - jxmegamenu
+      - jxnewsletter
+      - jxoneclickorder
+      - jxproductlistgallery
+      - jxproductzoomer
+      - jxsearch
+      - jxwishlist
+      - ps_buybuttonlite
+      - ps_categoryproducts
+      - ps_crossselling
+      - ps_newproducts
+      - ps_specials
+      - sampledatainstall
+  hooks:
+    modules_to_hook:
+      displayAdminAfterHeader:
+        - welcome
+      displayAdminNavBarBeforeEnd:
+        - welcome
+      displayAdminStatsGraphEngine:
+        - graphnvd3
+      displayAdminStatsGridEngine:
+        - gridhtml
+      displayAdminStatsModules:
+        - pagesnotfound
+        - sekeywords
+        - statsbestcategories
+        - statsbestcustomers
+        - statsbestproducts
+        - statsbestsuppliers
+        - statsbestvouchers
+        - statscarrier
+        - statscatalog
+        - statscheckup
+        - statsequipment
+        - statsforecast
+        - statslive
+        - statsnewsletter
+        - statsorigin
+        - statspersonalinfos
+        - statsproduct
+        - statsregistrations
+        - statssales
+        - statssearch
+        - statsstock
+        - statsvisits
+        - jxwishlist
+      displayBackOfficeHeader:
+        - welcome
+        - sampledatainstall
+        - jxsearch
+        - jxmegamenu
+        - jxwishlist
+        - jxheaderaccount
+        - jxmegalayout
+        - jxcategoryproducts
+        - jxdaydeal
+        - jxblog
+        - jxblogpostposts
+        - jxblogpostproducts
+        - jxproductzoomer
+        - jxproductlistgallery
+        - jxlookbook
+        - jxnewsletter
+        - jxgooglemap
+        - jxoneclickorder
+      displayBackOfficeTop:
+        - jxoneclickorder
+      displayBeforeBodyClosingTag:
+        - statsdata
+        - jxmegamenu
+        - jxwishlist
+        - jxcategoryproducts
+        - jxdaydeal
+        - jxproductzoomer
+        - jxlookbook
+      displayCrossSellingShoppingCart:
+        - ps_featuredproducts
+      displayCustomerAccount:
+        - jxwishlist
+        - jxheaderaccount
+      displayCustomerAccountFormTop:
+        - jxheaderaccount
+      displayExpressCheckout:
+        - jxoneclickorder
+      displayFooter:
+        - ps_linklist
+        - ps_customeraccountlinks
+        - ps_emailsubscription
+        - ps_categorytree
+        - ps_contactinfo
+        - ps_socialfollow
+        - jxcompareproduct
+        - jxnewsletter
+      displayFooterProduct:
+        - ps_crossselling
+        - ps_categoryproducts
+      displayHeaderLoginButtons:
+        - jxheaderaccount
+      displayHome:
+        - ps_featuredproducts
+        - jxcategoryproducts
+        - jxlookbook
+        - jxdaydeal
+        - ps_newproducts
+        - ps_customtext
+        - ps_emailsubscription
+        - jxfeaturedposts
+        - jxgooglemap
+      displayHomeTab:
+        - jxmegalayout
+      displayHomeTabContent:
+        - jxmegalayout
+      displayJxblogImageManagerExtra:
+        - jxblogcomment
+      displayJxblogPostExtra:
+        - jxblogpostposts
+        - jxblogpostproducts
+      displayJXBlogPostFooter:
+        - jxblogpostposts
+        - jxblogpostproducts
+        - jxblogcomment
+      displayLeftColumn:
+        - ps_facetedsearch
+        - ps_newproducts
+        - ps_specials
+      displayMyAccountBlock:
+        - jxwishlist
+      displayNav1:
+        - ps_contactinfo
+      displayNav2:
+        - jxwishlist
+        - jxcompareproduct
+      displayOrderConfirmation2:
+        - ps_featuredproducts
+      displayPaymentReturn:
+        - ps_checkpayment
+        - ps_wirepayment
+      displayProductAdditionalInfo:
+        - jxwishlist
+        - jxcompareproduct
+        - jxlookbook
+        - jxoneclickorder
+      displayProductExtraContent:
+        - jxblogpostproducts
+      displayProductListFunctionalButtons:
+        - jxwishlist
+        - jxcompareproduct
+      displayProductListGallery:
+        - jxproductlistgallery
+      displayProductPriceBlock:
+        - jxdaydeal
+      displayReassurance:
+        - blockreassurance
+      displayRightColumnProduct:
+        - jxlookbook
+      displaySearch:
+        - ps_searchbar
+      displaySocialLoginButtons:
+        - jxheaderaccount
+      displayTop:
+        - jxmegamenu
+        - ps_languageselector
+        - ps_currencyselector
+        - jxsearch
+        - ps_shoppingcart
+        - jxheaderaccount
+        - ps_linklist
+      displayTopColumn:
+        - ps_imageslider
+        - jxlookbook
+  image_types:
+    brand:
+      width: 140
+      height: 100
+      scope:
+        - manufacturers
+    cart_default:
+      width: 125
+      height: 187
+      scope:
+        - products
+    category_default:
+      width: 141
+      height: 180
+      scope:
+        - categories
+    home_default:
+      width: 310
+      height: 465
+      scope:
+        - products
+    large_default:
+      width: 534
+      height: 800
+      scope:
+        - products
+        - manufacturers
+        - suppliers
+    medium_default:
+      width: 452
+      height: 678
+      scope:
+        - products
+        - manufacturers
+        - suppliers
+    small_default:
+      width: 98
+      height: 147
+      scope:
+        - products
+        - categories
+        - manufacturers
+        - suppliers
+    stores_default:
+      width: 170
+      height: 115
+      scope:
+        - stores
+
+theme_settings:
+  default_layout: layout-full-width
+  layouts:
+    category: layout-left-column
+    best-sales: layout-left-column
+    new-products: layout-left-column
+    prices-drop: layout-left-column
+    contact: layout-left-column
+
+dependencies:
+  modules:
+    - jxblog
+    - jxblogcomment
+    - jxblogpostposts
+    - jxblogpostproducts
+    - jxcategoryproducts
+    - jxcompareproduct
+    - jxdaydeal
+    - jxfeaturedposts
+    - jxgooglemap
+    - jxheaderaccount
+    - jxlookbook
+    - jxmegalayout
+    - jxmegamenu
+    - jxnewsletter
+    - jxoneclickorder
+    - jxproductlistgallery
+    - jxproductzoomer
+    - jxsearch
+    - jxwishlist
+    - ps_buybuttonlite
+    - ps_categoryproducts
+    - ps_crossselling
+    - ps_newproducts
+    - ps_specials
+    - sampledatainstall

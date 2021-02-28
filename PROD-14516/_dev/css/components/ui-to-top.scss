@@ -1,0 +1,35 @@
+.ui-to-top {
+  position: fixed;
+  right: 40px;
+  bottom: 30px;
+  line-height: 1;
+  background: none;
+  color: $gray-800;
+  text-align: center;
+  text-decoration: none;
+  transform: translateY(100px);
+  overflow: visible;
+  transition: 0.3s all ease;
+  z-index: 999;
+  &:hover {
+    text-decoration: none;
+    color: $brand-primary;
+  }
+  &.active {
+    transform: translateY(0);
+  }
+  &:before {
+    @include addIcon('\f106', 50px, line-height, color, margin-left, margin-right, vertical-align);
+  }
+}
+
+.mobile .ui-to-top,
+.tablet .ui-to-top {
+  display: none !important;
+}
+
+.content_only {
+  .ui-to-top {
+    display: none !important;
+  }
+}

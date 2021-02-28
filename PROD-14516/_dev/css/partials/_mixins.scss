@@ -1,0 +1,32 @@
+//mixin for icons - @include addIcon('\f021', font-size, line-height, color, margin-left, margin-right, vertical-align)
+@mixin addIcon($content, $font-size, $line-height, $color, $margin-left, $margin-right, $vertical-align) {
+  font-family: 'FontAwesome';
+  content: $content;
+  @if $font-size != font-size {
+    font-size: $font-size;
+  }
+  @if $line-height != line-height {
+    line-height: $line-height;
+  }
+  @if $color != color {
+    color: $color;
+  }
+  @if $margin-left != margin-left {
+    margin-left: $margin-left;
+  }
+  @if $margin-right != margin-right {
+    margin-right: $margin-right;
+  }
+  @if $vertical-align != vertical-align {
+    vertical-align: $vertical-align;
+  }
+}
+
+@mixin addLinearIcon($content, $font-size: inherit) {
+  font-family: 'Linearicons';
+  content: $content;
+  display: inline-block;
+  font-weight: normal;
+  font-style: normal;
+  font-size: $font-size;
+}

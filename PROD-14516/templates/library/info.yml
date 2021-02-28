@@ -1,0 +1,24 @@
+name: startertheme
+version: 1.0.0
+pages_list:
+  catalog:
+      name: Catalog
+      layouts:
+        catalog-1:
+            name: Catalog 1
+        catalog-2:
+            name: Catalog 2
+  pinfo:
+      name: Product Info
+      layouts:
+        pinfo-1:
+            name: Product info 1
+        pinfo-2:
+            name: Product info 2
+  quickview:
+      name: Quick View
+      layouts:
+        quickview-1:
+            name: Quick view 1
+        quickview-2:
+            name: Quick view 2

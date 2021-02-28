@@ -1,0 +1,259 @@
+//megalayout style extensions
+.row.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.module:empty {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.position-lg-static {
+  @include media-breakpoint-up(lg) {
+    position: static;
+  }
+}
+
+//megalayout custom styles
+.logo {
+  .light {
+    display: none;
+  }
+}
+
+.custom-tabs {
+  .custom-tab-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 20px;
+    > div {
+      margin: 0 25px;
+      cursor: pointer;
+      @include media-breakpoint-down(md) {
+        margin: 0 15px;
+        .jxml-html-title {
+          font-size: 18px;
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        margin: 0 10px;
+        .jxml-html-title {
+          font-size: 16px;
+        }
+      }
+      .jxml-html-title {
+        transition: color 0.3s ease;
+        margin: 0;
+      }
+      &.active, &:hover {
+        .jxml-html-title {
+          color: $brand-primary;
+        }
+      }
+    }
+  }
+  .custom-tab-contents {
+    > div {
+      &:not(.active) {
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+      }
+      &.active {
+        transition: opacity 0.3s ease;
+      }
+    }
+  }
+  .featured-products > h1, .jxml-slider-title {
+    display: none;
+  }
+  &.vertical-custom-tabs {
+    .custom-tab-links {
+      justify-content: start;
+      padding-bottom: 0;
+      flex-direction: column;
+      > div {
+        margin: 0 0 5px;
+        padding: 10px 20px;
+        background: $gray-200;
+        .jxml-html-title {
+          font-size: 20px;
+          text-transform: uppercase;
+        }
+        &.active, &:hover {
+          background: $gray-800;
+          .jxml-html-title {
+            color: white;
+          }
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        display: block;
+        text-align: center;
+        > div {
+          margin: 0 2px 3px;
+          padding: 3px 7px;
+          display: inline-block;
+          .jxml-html-title {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.jxml-banner {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  .jxml-banner-description {
+    color: $black;
+  }
+  .jxml-banner-img {
+    width: 100%;
+  }
+  > a {
+    display: block;
+  }
+  img + .jxml-banner-description {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    transform: translateY(-50%);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: $black;
+    margin-bottom: 0;
+  }
+  h1, .h1 {
+    font-family: $font-family-secondary;
+    &.big {
+      font-size: 40px;
+      line-height: 0.8;
+      padding-bottom: 10px;
+    }
+  }
+  h2 {
+    font-family: $font-family-base;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+  h4 {
+    line-height: (29 / 20);
+    @include media-breakpoint-down(sm) {
+      font-size: 16px;
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: 14px;
+    }
+  }
+  h5 {
+    font-weight: 400;
+    letter-spacing: 0.4em;
+  }
+  h6 {
+    font-weight: 400;
+  }
+  p {
+    margin-bottom: 0;
+    font-weight: 300;
+  }
+  * + p {
+    margin-top: 8px;
+  }
+  * + .btn {
+    margin-top: 10px;
+  }
+  * + h6 {
+    margin-top: 15px;
+  }
+  &.bordered {
+    > a:before {
+      display: block;
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      right: 10px;
+      bottom: 10px;
+      border: 1px solid $white;
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    h1, .h1 {
+      &.big {
+        font-size: 70px;
+        padding-bottom: 15px;
+      }
+    }
+    h5 {
+      font-size: 20px;
+    }
+    * + .btn {
+      margin-top: 20px;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    h1, .h1 {
+      &.big {
+        font-size: 90px;
+        padding-bottom: 30px;
+      }
+    }
+    h5 {
+      font-size: 24px;
+    }
+    h6 {
+      font-size: 20px;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    h1, .h1 {
+      &.big {
+        font-size: 100px;
+        line-height: 60px;
+        padding-bottom: 40px;
+      }
+    }
+    * + .btn {
+      margin-top: 40px;
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    h1, .h1 {
+      &.big {
+        font-size: 140px;
+        line-height: 80px;
+        padding-bottom: 60px;
+      }
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    .btn {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+  }
+}
+
+.product-horizontal {
+  .product-miniature {
+    .product-miniature-container {
+      display: flex;
+      padding: 0;
+      background: #F5F7F7;
+    }
+  }
+}
+
+.header-dropdown {
+  .icon-toggle {
+    display: block;
+  }
+}

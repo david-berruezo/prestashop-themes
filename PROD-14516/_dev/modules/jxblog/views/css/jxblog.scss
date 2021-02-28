@@ -1,0 +1,248 @@
+/**
+ * 2017 Zemez
+ *
+ * JX Blog
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the General Public License (GPL 2.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/GPL-2.0
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade the module to newer
+ * versions in the future.
+ *
+ *  @author    Zemez (Alexander Grosul)
+ *  @copyright 2017 Zemez
+ *  @license   http://opensource.org/licenses/GPL-2.0 General Public License (GPL 2.0)
+ */
+
+.blog-categories {
+  .bc-miniature {
+    .bc-miniature-container {
+      position: relative;
+      .bc-name {
+        position: absolute;
+        left: 0;
+        bottom: 10%;
+        max-width: 90%;
+        font-size: 30px;
+        line-height: 1.1;
+        font-weight: bold;
+        color: white;
+        background: rgba($gray-900, 0.7);
+        padding: 5px 7% 7px;
+        transition: background 0.3s;
+      }
+      &:hover .bc-name {
+        background: $gray-900;
+      }
+    }
+  }
+}
+
+.blog-category {
+  .blog-category-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .btn {
+      order: 1;
+      &:not(.active) {
+        span:last-child {
+          display: none;
+        }
+        + .blog-category-description-short + .blog-category-description {
+          display: none;
+        }
+      }
+      &.active {
+        span:first-child {
+          display: none;
+        }
+        + .blog-category-description-short {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+#blog-comments-container {
+  padding: 30px;
+  .commenting-field {
+    margin-bottom: 30px;
+  }
+}
+
+.bp-miniature {
+  color: $gray-500;
+  .bp-thumbnail {
+    img {
+      width: 100%;
+    }
+  }
+  .post-meta {
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 20px;
+    .day:after {
+      content: ',';
+    }
+  }
+  .bp-name {
+    color: $black;
+    margin-bottom: 0;
+  }
+  .bp-short-description {
+    margin-top: 5px;
+    p {
+      margin: 0;
+    }
+  }
+  .link {
+    margin-top: 15px;
+    @include media-breakpoint-up(md) {
+      margin-top: 20px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-top: 30px;
+    }
+  }
+}
+
+.jxblog-type-2 {
+  .bp-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .bp-name {
+      font-size: 18px;
+      font-weight: 400;
+    }
+    .bp-short-description {
+      color: $gray-400;
+      margin-top: 18px;
+    }
+    .post-meta {
+      order: 1;
+      color: $gray-400;
+      margin-bottom: 0;
+    }
+    .link {
+      display: block;
+      width: 50px;
+      height: 50px;
+      padding-left: 3px;
+      border: 2px solid;
+      border-radius: 50%;
+      font-size: 0;
+      color: $gray-300;
+      text-align: center;
+      transition: 0.3s all ease;
+      &:before {
+        display: inline-block;
+        @include addIcon('\f04b', 12px, 47px, color, margin-left, margin-right, vertical-align);
+      }
+      i {
+        display: none;
+      }
+      &:hover {
+        border-color: $brand-primary;
+        background-color: $brand-primary;
+        color: $white;
+      }
+    }
+    @include media-breakpoint-up(xl) {
+      .post-meta {
+        margin-top: 30px;
+      }
+    }
+  }
+  .bp-thumbnail {
+    display: none;
+  }
+}
+
+.jxblog-type-3 {
+  .bp-info {
+    .bp-name {
+      font-size: 16px;
+      font-weight: 400;
+      margin-top: 10px;
+    }
+    .bp-short-description {
+      color: $gray-400;
+      margin-top: 10px;
+    }
+    .post-meta {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 0;
+      color: $gray-500;
+      .day {
+        display: block;
+        order: -1;
+        width: 100%;
+        font-size: 40px;
+        line-height: 1;
+        color: $black;
+        &:after {
+          display: none;
+        }
+      }
+      .month {
+        margin-right: 4px;
+      }
+    }
+    .link {
+      display: inline-block;
+    }
+  }
+  .bp-thumbnail {
+    display: none;
+  }
+  @include media-breakpoint-up(md) {
+    > div {
+      padding-right: 2%;
+      .bp-miniature {
+        height: 100%;
+        min-height: 100%;
+        border-right: 1px solid $gray-250;
+        padding-right: 12%;
+      }
+      &:nth-child(3n+3) {
+        .bp-miniature {
+          border-right: none;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    .bp-info {
+      .bp-name {
+        font-size: 18px;
+        margin-top: 22px;
+      }
+      .bp-short-description {
+        margin-top: 14px;
+      }
+      .post-meta {
+        .day {
+          font-size: 60px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    > div {
+      padding-right: 4.5%;
+      .bp-miniature {
+        padding-right: 22%;
+      }
+    }
+  }
+}

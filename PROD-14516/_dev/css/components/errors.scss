@@ -1,0 +1,15 @@
+#pagenotfound {
+  .page-not-found {
+    background: white;
+    padding: 1rem;
+    font-size: $font-size-sm;
+    color: $gray-600;
+    max-width: 570px;
+    margin: 0 auto;
+    h4 {
+      font-size: $font-size-base;
+      font-weight: 700;
+      margin: 0.5rem 0 1rem;
+    }
+  }
+}

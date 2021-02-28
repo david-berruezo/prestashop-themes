@@ -1,0 +1,199 @@
+@import "variables_color";
+@import "~bootstrap/scss/mixins";
+@import "mixins";
+
+
+$enable-caret: false !default;
+$enable-rounded: true !default;
+$enable-shadows: false !default;
+
+$border-radius: 30px;
+$border-radius-sm: 30px;
+$border-radius-lg: 30px;
+
+//main colors
+$brand-primary: $red;
+$brand-secondary: $gray-600;
+$brand-success: $green;
+$brand-info: $cyan;
+$brand-warning: $orange;
+$brand-danger: $red;
+$body-color: $gray-600;
+$body-bg: white;
+$border-color: $gray-250;
+
+//fonts
+$font-family-base: 'Poppins', sans-serif;
+$font-family-primary: 'Montserrat', sans-serif;
+$font-family-secondary: 'Yellowtail', cursive;
+
+//Links
+$link-color: inherit;
+$link-hover-color: $brand-primary;
+$link-hover-decoration: none;
+
+//font size
+$font-size-base: 1rem;
+$font-size-lg: 1.143rem;
+$font-size-sm: 0.857rem;
+$font-weight-base: 400;
+$line-height-base: 1.5;
+$h1-font-size: 2.8rem;
+$h2-font-size: 2rem;
+$h3-font-size: 1.8rem;
+$h4-font-size: 1.714rem;
+$h5-font-size: 1.286rem;
+$h6-font-size: 1.143rem;
+$close-font-size: 2.14rem;
+$headings-margin-bottom: 11px;
+$headings-font-weight: inherit;
+$headings-line-height: 1.5;
+$headings-color: $gray-700;
+
+//buttons
+$btn-font-weight: 400;
+$btn-transition: 0.3s all ease;
+
+//Spacing
+$spacer: 2rem;
+$extra-small-space: $spacer * .25;
+$small-space: $spacer * .5;
+$medium-space: $spacer;
+$large-space: $spacer * 1.5;
+$extra-large-space: $spacer * 3;
+$spacers: (
+    0: 0,
+    1: ($spacer * .4),
+    2: ($spacer * .714),
+    3: $spacer,
+    4: ($spacer * 1.75),
+    5: ($spacer * 3.393),
+    6: ($spacer * 5.8),
+    7: ($spacer * 8)
+);
+
+//forms
+$form-group-margin-bottom: 1.5rem;
+$input-bg: $gray-200;
+$input-btn-border-width: 1px;
+$input-border-color: $gray-200;
+$input-focus-border-color: $gray-300;
+$input-focus-color: $black;
+$input-placeholder-color: $gray-500;
+$input-box-shadow: none;
+$input-group-btn-border-color: initial;
+$input-group-addon-bg: $input-focus-border-color;
+$input-group-addon-border-color: $input-focus-border-color;
+
+$input-btn-line-height: 1.5;
+$input-btn-padding-y: 0.964rem;
+$input-btn-padding-x: 1.125rem;
+
+$input-btn-line-height-sm: 1.5;
+$input-btn-padding-y-sm: 0.893rem;
+$input-btn-padding-x-sm: 1rem;
+
+$input-btn-line-height-lg: 1.5;
+$input-btn-padding-y-lg: 1.214rem;
+$input-btn-padding-x-lg: 2.4rem;
+
+//custom forms
+$custom-control-gutter: 2.5rem;
+$custom-control-spacer-x: 1.07rem;
+$custom-control-indicator-size: 1.072rem;
+$custom-control-indicator-bg: transparent;
+$custom-control-indicator-box-shadow: inset 0 0 0 1px $gray-250;
+$custom-control-indicator-checked-box-shadow: inset 0 0 0 1px $gray-300;
+$custom-control-indicator-disabled-bg: $gray-200;
+$custom-control-description-disabled-color: $gray-200;
+$custom-control-indicator-checked-bg: $white;
+$custom-control-indicator-checked-color: $black;
+$custom-control-indicator-focus-box-shadow: inset 0 0 0 1px $gray-300;
+$custom-control-indicator-active-bg: $white;
+$custom-control-indicator-active-box-shadow: inset 0 0 0 1px $gray-300;
+$custom-radio-indicator-icon-checked: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-3 -3 6 6'%3E%3Ccircle r='3' fill='%23000'/%3E%3C/svg%3E");
+$custom-checkbox-indicator-border-radius: 0;
+$custom-select-box-shadow: none;
+$custom-select-focus-box-shadow: none;
+$custom-file-height: 60px;
+
+$custom-select-height: 50px;
+$custom-select-padding-x: 3rem;
+$custom-select-font-size-lg: 16px;
+$custom-select-height-lg: 60px;
+$custom-select-height-sm: 45px;
+
+//custom-select
+$custom-select-height: 60px;
+$custom-select-padding-x: 1.25rem;
+$custom-select-indicator: url("data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Im0xMjEuMywzNC42Yy0xLjYtMS42LTQuMi0xLjYtNS44LDBsLTUxLDUxLjEtNTEuMS01MS4xYy0xLjYtMS42LTQuMi0xLjYtNS44LDAtMS42LDEuNi0xLjYsNC4yIDAsNS44bDUzLjksNTMuOWMwLjgsMC44IDEuOCwxLjIgMi45LDEuMiAxLDAgMi4xLTAuNCAyLjktMS4ybDUzLjktNTMuOWMxLjctMS42IDEuNy00LjIgMC4xLTUuOHoiIGZpbGw9IiMwMDAwMDAiLz4KICA8L2c+Cjwvc3ZnPgo=");
+$custom-select-bg: $gray-200;
+$custom-select-color: $gray-500;
+$custom-select-border-color: $gray-200;
+$custom-select-focus-border-color: $gray-300;
+$custom-select-focus-box-shadow: none;
+$custom-select-border-radius: 30px;
+
+//modals
+$modal-lg: 1020px;
+$modal-md: 750px;
+$modal-sm: 560px;
+$modal-header-padding: 30px;
+$modal-inner-padding: 30px;
+$modal-content-border-radius: 0;
+$modal-dialog-margin-y-sm-up: 80px;
+$modal-content-border-width: 0;
+$modal-content-box-shadow-xs: 0px 15px 25px rgba(0, 0, 0, 0.1);
+
+//dropdowns
+$dropdown-min-width: 230px;
+$dropdown-padding-y: 5px;
+$dropdown-spacer: 20px;
+$dropdown-border-width: 0;
+$dropdown-border-radius: 10px;
+$dropdown-bg: white;
+$dropdown-box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+$enable-shadows: true;
+$dropdown-item-padding-y: 10px;
+$dropdown-item-padding-x: 15px;
+$dropdown-link-hover-color: $gray-600;
+$dropdown-link-hover-bg: transparent;
+$dropdown-link-active-color: $brand-primary;
+$dropdown-link-active-bg: transparent;
+
+//breadcrumb
+$breadcrumb-padding-y: .75rem;
+$breadcrumb-padding-x: 0;
+$breadcrumb-margin-bottom: 1.64rem;
+$breadcrumb-bg: transparent;
+$breadcrumb-item-padding: 17px;
+$breadcrumb-divider: '\f105';
+$breadcrumb-divider-color: $gray-400;
+$breadcrumb-active-color: $gray-500;
+
+//grid example
+$grid-columns: 12;
+$grid-gutter-width: 20px;
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+    xs: 0,
+  // Small screen / phone
+    sm: 576px,
+  // Medium screen / tablet
+    md: 768px,
+  // Large screen / desktop
+    lg: 992px,
+  // Extra large screen / wide desktop
+    xl: 1200px,
+  // Extra large screen / wide desktop
+    xxl: 1340px
+);
+
+$container-max-widths: (
+    sm: 576px,
+    md: 760px,
+    lg: 990px,
+    xl: 1190px,
+    xxl: 1320px
+);

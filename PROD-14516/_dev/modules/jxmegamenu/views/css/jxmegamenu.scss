@@ -1,0 +1,582 @@
+.default-menu {
+  &:not(.inactive-device)[data-off-canvas] {
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+  ul {
+    margin: 0;
+  }
+  > ul > li {
+    > a, > .top-level-menu-li-span {
+      display: block;
+      position: relative;
+      cursor: pointer;
+      transition: 0.3s all ease;
+    }
+    > .sf-with-ul {
+      padding-right: 20px;
+    }
+    &.sfHover > a, &.sfHoverForce > a, &.sfHover > .top-level-menu-li-span, &.sfHoverForce > .top-level-menu-li-span, > a:hover, > .top-level-menu-li-span:hover {
+      color: $gray-800;
+    }
+  }
+
+  .is-megamenu, li.simple ul {
+    display: none;
+  }
+  @include media-breakpoint-down(md) {
+    position: relative;
+  }
+  @include media-breakpoint-up(md) {
+    //  Top menu
+    > ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -37px;
+      > li {
+        margin-left: 37px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        > .sf-with-ul {
+          &:after {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            @include addIcon('\f107', 14px, line-height, color, margin-left, margin-right, vertical-align);
+            line-height: 14px;
+            margin-top: -7px;
+            transition: .3s transform ease;
+            backface-visibility: hidden;
+          }
+          &:before {
+            display: inline-block;
+            content: '';
+            position: absolute;
+            left: 0;
+            right: -24px;
+            bottom: -22px;
+            border-bottom: 5px solid $gray-200;
+            opacity: 0;
+            transform-origin: left;
+            transform: scaleX(0);
+            transition: 0.3s all ease;
+          }
+        }
+        &.sfHover > .sf-with-ul, > .sf-with-ul:hover {
+          &:before {
+            opacity: 1;
+            transform: scaleX(1);
+          }
+          &:after {
+            transform: rotate(-180deg);
+          }
+        }
+      }
+    }
+
+    //  Simple menu
+    li.simple {
+      position: relative;
+      ul {
+        position: absolute;
+        top: -20px;
+        left: 100%;
+        width: 240px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        background: $white;
+        color: $gray-500;
+        z-index: 99;
+      }
+      > ul {
+        top: 100%;
+        left: -25px;
+        margin-top: 12px;
+        box-shadow: none;
+        &:before {
+          display: block;
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          background: $white;
+          border-radius: 10px;
+          box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+          z-index: 100;
+        }
+      }
+      li {
+        position: relative;
+        padding: 6px 25px;
+        > a, > .top-level-menu-li-span {
+          position: relative;
+          z-index: 101;
+        }
+        .sf-with-ul {
+          display: block;
+          padding-right: 10px;
+          &:after {
+            position: absolute;
+            top: -1px;
+            right: 0;
+            @include addIcon('\f105', font-size, line-height, color, margin-left, margin-right, vertical-align);
+            transition: .3s transform ease;
+            backface-visibility: hidden;
+          }
+        }
+        &.sfHover > .sf-with-ul, > .sf-with-ul:hover {
+          color: $brand-primary;
+          &:after {
+            transform: translateX(10px);
+          }
+        }
+      }
+      @include media-breakpoint-up(xl) {
+        ul {
+          top: -30px;
+          width: 260px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+        > ul {
+          top: 100%;
+          left: -39px;
+        }
+        li {
+          padding: 8px 40px;
+        }
+      }
+    }
+    //  Mega-menu
+    .is-megamenu {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      margin-top: 33px;
+      z-index: 7;
+      > div {
+        background: $white;
+        padding: 40px;
+        border-radius: 30px;
+        width: 100%;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+        @include media-breakpoint-up(lg) {
+          width: 970px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    > ul {
+      margin-left: -54px;
+      > li {
+        margin-left: 54px;
+      }
+    }
+  }
+  .menu-title {
+    display: none;
+  }
+
+  @include media-breakpoint-down(sm) {
+    //  Top menu
+    > ul {
+      > li {
+        > a, > .top-level-menu-li-span {
+          font-size: 18px;
+          color: $black;
+          &:hover {
+            color: $brand-primary;
+          }
+        }
+        > .menu-mobile-grover:after {
+          line-height: 1.5;
+        }
+      }
+      > li, > li.simple li, .is-megamenu li {
+        margin-top: 2px;
+        display: flex;
+        flex-wrap: wrap;
+        > a, > .top-level-menu-li-span {
+          padding: 5px 0;
+          display: inline-block;
+        }
+      }
+      > li.simple {
+        ul {
+          padding-top: 0;
+          padding-bottom: 2px;
+        }
+      }
+      .menu-mobile-grover {
+        flex: 1 1 auto;
+        text-align: right;
+        padding: 5px 0;
+      }
+    }
+
+    .is-megamenu, .is-simplemenu, .is-simplemenu ul, .is-megamenu ul {
+      flex: 0 0 100%;
+      order: 2;
+    }
+    .is-simplemenu, .is-simplemenu ul, .is-megamenu ul {
+      padding-left: 20px;
+    }
+  }
+
+  @include media-breakpoint-only(sm) {
+    .w_100_sm, .products_bloc_3_items {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .w_50_sm {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+    .w_33_sm {
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+    }
+  }
+}
+
+.column_menu {
+  ul.menu {
+    > li, li.simple, li.simple li {
+      border: 1px solid $gray-200;
+      padding: 10px 20px;
+      position: relative;
+      margin-bottom: 0;
+      &:not(:last-child) {
+        border-bottom: none;
+      }
+      &:before {
+        content: '';
+        background: $gray-200;
+        width: 0;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: all .3s;
+        z-index: -1;
+      }
+      &.sfHover {
+        &:before {
+          width: 100%;
+        }
+        > a, > span {
+          &.sf-with-ul:after {
+            color: $gray-900;
+          }
+          + ul, + .is-megamenu {
+            animation-name: slideInUp;
+            animation-duration: .5s;
+            animation-fill-mode: both;
+          }
+        }
+      }
+    }
+    > li > a, > li > span:not(.menu-mobile-grover), li.simple a, li.simple span:not(.menu-mobile-grover) {
+      &.sf-with-ul {
+        margin-right: 10px;
+        &:after {
+          position: absolute;
+          right: 0;
+          top: 9px;
+          @include addIcon('\f101', 28px, 28px, $gray-200, margin-left, margin-right, vertical-align);
+          width: 28px;
+          height: 28px;
+          text-align: center;
+          cursor: pointer;
+          transition: all .3s;
+          @include media-breakpoint-only(md) {
+            height: 20px;
+            width: 20px;
+            font-size: 20px;
+            line-height: 20px;
+          }
+        }
+        + ul, + .is-megamenu {
+          position: absolute;
+          left: calc(100% - 1px);
+          width: 100%;
+          top: -1px;
+          z-index: 99;
+          background: white;
+          &.is-megamenu {
+            width: 1168px;
+            padding: 30px;
+            border: 1px solid $gray-200;
+            .sf-with-ul + ul {
+              display: block !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  &#click_menu, #header & {
+    ul.menu {
+      > li, > li.simple, > li.simple li {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        justify-content: space-between;
+        > * {
+          z-index: 2;
+        }
+        .menu-mobile-grover {
+          z-index: 1;
+          transition: all 0.3s;
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+            background: $gray-200;
+            transition: all 0.3s;
+          }
+          &.active {
+            color: $brand-primary;
+            + a {
+              color: $gray-900;
+            }
+            &:before {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .is-megamenu, > li.simple ul, > li.simple li ul {
+        display: none;
+        flex: 0 0 calc(100% + 40px);
+        order: 2;
+        background: white;
+        padding: 10px 20px;
+        margin: 10px -20px -10px;
+      }
+      > li.simple > ul > li {
+        padding-right: 0;
+        padding-left: 0;
+      }
+      > li.simple li {
+        border: none;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 15px;
+        justify-content: flex-start;
+        ul {
+          margin-top: 0;
+        }
+        a {
+          margin-right: 20px;
+        }
+        .menu-mobile-grover {
+          &:before {
+            display: none;
+          }
+          &:after {
+            font-size: 26px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu-mobile-grover {
+  order: 1;
+  cursor: pointer;
+  font-size: 0;
+  line-height: 0;
+  &:after {
+    position: relative;
+    @include addIcon('\f107', 20px, 1, color, margin-left, margin-right, vertical-align);
+  }
+  &.active:after {
+    content: '\f106';
+  }
+}
+
+.jxmegamenu_item {
+  .menu_badge {
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    z-index: 2;
+    font-size: 10px;
+    display: inline-block;
+    background: $brand-primary;
+    color: $white;
+    padding: 1px 5px 2px 5px;
+    line-height: 12px;
+    border-radius: 3px;
+    margin-left: 10px;
+  }
+
+  .is-megamenu {
+    color: $gray-500;
+    h3 {
+      font-size: 14px;
+      line-height: 22px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    ul.content ul {
+      display: none;
+    }
+    @include media-breakpoint-up(md) {
+      ul.content {
+        > li.category, > li.all-manufacturers, > li.all-suppliers, > li.product, > li.cms-category, > li.cms-page, > li.custom-link {
+          > a {
+            display: inline-block;
+            font-weight: 500;
+            color: $black;
+            margin-bottom: 14px;
+            @include media-breakpoint-up(lg) {
+              font-size: 16px;
+            }
+            &:hover, &:focus {
+              color: $brand-primary;
+            }
+          }
+          ul li {
+            margin-bottom: 15px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+        ul {
+          opacity: 1 !important;
+          display: block !important;
+        }
+      }
+    }
+    .html.without-title {
+      .html-title {
+        display: none;
+      }
+    }
+    .product-info .product {
+      @include media-breakpoint-up(lg) {
+        position: relative;
+        overflow: hidden;
+        h5, .product-prices-sm {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          background: white;
+          padding: 3px 5px;
+          transform: translateY(-100%);
+          transition: all 0.15s ease-in-out;
+          text-align: center;
+          opacity: 0;
+        }
+        h5 {
+          font-size: 12px;
+          line-height: 20px;
+          margin-bottom: 5px;
+          border-top: 2px solid $gray-200;
+        }
+        .product-prices-sm {
+          top: auto;
+          bottom: 0;
+          justify-content: center;
+          border-bottom: 2px solid $gray-200;
+          transform: translateY(100%);
+        }
+        &:hover {
+          h5, .product-prices-sm {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      }
+      @include media-breakpoint-down(md) {
+        h5 {
+          font-size: 11px;
+          line-height: 16px;
+          margin: 10px 0 5px;
+        }
+        .product-prices-sm {
+          font-size: 10px;
+          line-height: 16px;
+          .regular-price {
+            display: none;
+          }
+          .price {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .products_bloc_3_items {
+      ul.content {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px 20px;
+        .html {
+          flex: 0 0 100%;
+          padding: 0 10px;
+        }
+        .product-info {
+          flex: 0 0 33.3333%;
+          padding: 0 10px;
+        }
+      }
+    }
+    .menuvideowrapper {
+      clear: both;
+      float: none;
+      height: 0;
+      padding-bottom: 56.25%;
+      padding-top: 25px;
+      position: relative;
+      width: 100%;
+      iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+    .embed-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      overflow: hidden;
+      max-width: 100%;
+      height: auto;
+      iframe, object, embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .frontend-map {
+      min-height: 200px;
+    }
+    .megamenu-row + .megamenu-row {
+      margin-top: 40px;
+    }
+  }
+}

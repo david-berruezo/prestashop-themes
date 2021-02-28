@@ -1,0 +1,296 @@
+.jxsearch-wrapper {
+  .icon-toggle {
+    display: block;
+    line-height: 0;
+    i {
+      display: inline-block;
+      font-size: 20px;
+      line-height: 1;
+    }
+    span {
+      display: none;
+    }
+  }
+  .nav-tabs {
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    border: none;
+    margin: 0;
+    transform: translateY(-50%);
+    + .tab-content {
+      padding-left: 25px;
+    }
+    li {
+      border: none;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      a {
+        border: none;
+        padding: 0;
+        font-size: 20px;
+        line-height: 20px;
+        color: $gray-900;
+        &.active {
+          display: none;
+        }
+      }
+      &:first-child a {
+        color: $brand-primary;
+      }
+    }
+    i {
+      display: block;
+      font-size: 22px;
+    }
+  }
+  .tab-content {
+    width: 100%;
+    margin: 0;
+    form {
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      padding-left: 8px;
+    }
+  }
+  #jxsearchblock {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: calc(100% - 30px);
+    max-width: 600px;
+    margin: 0 auto;
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: right;
+    opacity: 0;
+    transition: 0.3s all ease;
+    z-index: 5;
+    .form-control {
+      border: none;
+      padding: 16px 50px 16px 36px;
+      border-radius: 35px;
+      background-color: $white;
+    }
+    @include media-breakpoint-up(md) {
+      width: calc(100% - 50px);
+    }
+    @include media-breakpoint-up(lg) {
+      max-width: 880px;
+    }
+    @include media-breakpoint-up(xl) {
+      max-width: 990px;
+      .form-control {
+        padding: 24px 65px 24px 36px;
+      }
+    }
+    @include media-breakpoint-up(xxl) {
+      max-width: 1090px;
+    }
+  }
+
+  .button-search {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    margin-top: -20px;
+    background: none;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s color ease;
+    @include media-breakpoint-up(xl) {
+      right: 24px;
+    }
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+
+  #jxsearch-close {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    font-size: 28px;
+    line-height: 1;
+    margin-top: -14px;
+    margin-right: 3px;
+    @include media-breakpoint-up(md) {
+      margin-right: 16px;
+    }
+  }
+
+  &.active {
+    #jxsearchblock {
+      transform: translateY(-50%) scaleX(1);
+      opacity: 1;
+    }
+  }
+
+  .custom-select {
+    width: 200px;
+    @include media-breakpoint-down(sm) {
+      max-width: 35%;
+    }
+  }
+  .jxsearch-result {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 100%;
+    padding-top: 60px;
+    border-radius: 35px;
+    background-color: $white;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: -1;
+    > div {
+      overflow-y: auto;
+      max-height: calc(100vh - 80px);
+      .jxsearch-row {
+        padding: 15px 20px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        .jxsearch-inner-row {
+          position: relative;
+          display: flex;
+          align-items: center;
+          img {
+            max-width: 74px;
+            flex-grow: 0;
+          }
+          > div {
+            flex: 1 1 auto;
+            padding-left: 25px;
+          }
+        }
+        &:hover {
+          background: #F7F3F2;
+        }
+      }
+      .reference, .quantity, .availability {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 15px 0 0;
+        font-size: 12px;
+        &.availability {
+          text-decoration: underline;
+        }
+        &.quantity {
+          color: #ccc;
+        }
+      }
+      .name {
+        display: block;
+      }
+      .price {
+        font-weight: 500;
+        color: $black;
+        margin-top: 8px;
+      }
+      .description-short {
+        margin-top: 10px;
+      }
+      div > strong {
+        font-weight: normal;
+        color: black;
+      }
+      .manufacturer-name, .supplier-name {
+        float: right;
+        margin-left: 20px;
+        display: block;
+        background: #ffffff;
+        padding: 3px 7px;
+        font-size: 11px;
+        line-height: 15px;
+      }
+
+      &.loading {
+        opacity: 0.5;
+      }
+
+      div.hidden-row, div.hidden-page {
+        display: none;
+      }
+      .pagers {
+        float: right;
+        padding: 15px 20px 10px 10px;
+        a {
+          background: #f7f7f7;
+          padding: 5px 10px;
+          margin: 0 3px;
+          display: inline-block;
+          text-decoration: none;
+          &:hover, &.active, &:focus {
+            background: #f1f0f0;
+            color: #000;
+            outline: none;
+          }
+        }
+      }
+      .navigation {
+        float: right;
+        padding-top: 15px;
+        &.top {
+          padding-top: 0;
+          padding-bottom: 15px;
+        }
+        > a {
+          float: left;
+          font-size: 24px;
+          padding: 2px 0;
+          text-decoration: none;
+          &.disabled {
+            cursor: default;
+            color: #cccccc;
+          }
+          &:hover, &.active, &:focus {
+            outline: none;
+          }
+        }
+        .pagers {
+          float: left;
+          padding-top: 0;
+        }
+        .count-pages {
+          float: left;
+          font-size: 17px;
+          padding: 5px 10px;
+          .current {
+            color: #000000;
+          }
+        }
+      }
+      .jxsearch-alllink {
+        padding: 15px 10px 10px 20px;
+        float: left;
+        a {
+          display: block;
+          &:after {
+            @include addLinearIcon('\ebda', 21px);
+            vertical-align: middle;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .stickUpTop.isStuck {
+    .jxsearch-wrapper {
+      #jxsearchblock .form-control {
+        padding: 15px 65px 15px 30px;
+      }
+      .jxsearch-result {
+        padding-top: 52px;
+      }
+    }
+  }
+}

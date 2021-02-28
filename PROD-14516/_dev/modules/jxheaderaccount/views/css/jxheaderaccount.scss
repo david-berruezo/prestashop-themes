@@ -1,0 +1,211 @@
+/*
+* @section      Style for login wrapper
+* @description  This section holds specific style redeclarations for
+*               login content wrapper
+*/
+
+#jx-header-account-link {
+  display: block;
+  color: $gray-500;
+  line-height: 0;
+  i {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 1;
+  }
+  span {
+    display: none;
+    line-height: 1.2;
+  }
+  &:hover {
+    color: $brand-primary;
+  }
+}
+
+.jx-header-account-wrapper {
+  text-align: center;
+  h4 {
+    margin-bottom: 22px;
+  }
+  .dropdown-menu & {
+    width: 300px;
+    padding: 30px;
+  }
+  .form-control {
+    text-align: center;
+  }
+  .custom-checkbox {
+    text-align: left;
+  }
+  .custom-control-inline:last-child {
+    margin-right: 0;
+  }
+  .login-content, .forgot-password-content {
+    .form-group {
+      margin-bottom: 5px;
+    }
+  }
+  &.is-logged {
+    h3 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    @media (min-width: 768px) {
+      &.twocolumns {
+        @include media-breakpoint-up(sm) {
+          .dropdown-menu & {
+            width: 500px;
+          }
+        }
+        .user-data {
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+          img {
+            flex: 0 0 30%;
+            max-width: 30%;
+            margin-right: 20px;
+            border: 2px solid #f6f6f6;
+          }
+          h3 {
+            order: 1;
+          }
+        }
+        ul {
+          column-count: 2;
+          column-gap: 20px;
+          list-style-position: inside;
+        }
+      }
+    }
+  }
+  .header-login-content {
+    display: none;
+    &.active {
+      display: block;
+      max-height: none;
+      overflow: visible;
+    }
+  }
+  .header-login-footer {
+    margin-top: 20px;
+  }
+  .register-link {
+    color: $brand-primary;
+    margin-top: 5px;
+    a:hover {
+      color: $black;
+    }
+  }
+  footer {
+    text-align: center;
+  }
+  .radio-inline {
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+    .custom-radio {
+      margin-right: 0;
+    }
+  }
+}
+
+/*
+* @section      Style for social login buttons
+* @description  This section holds specific style for
+*               social login buttons
+*/
+
+.social-login-buttons {
+  margin: 0 -8px;
+  a {
+    display: inline-block;
+    margin: 0 8px 10px;
+    i {
+      margin-right: 10px;
+    }
+  }
+}
+
+/*
+* @section      MODAL AS LEFT/RIGHT SIDEBAR
+* @description  Add "left" or "right" in modal parent div, after class="modal".
+*/
+.jx-header-account {
+  .modal.left .modal-dialog,
+  .modal.right .modal-dialog {
+    position: fixed;
+    margin: auto;
+    width: 320px;
+    height: 100%;
+    transform: translate3d(0%, 0, 0);
+    @media (min-width: 768px) {
+      width: 500px;
+    }
+  }
+
+  .modal.left .modal-content,
+  .modal.right .modal-content {
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  /*Left*/
+  .modal.left.fade .modal-dialog {
+    left: -320px;
+    transition: opacity 0.3s linear, left 0.3s ease-out;
+    @media (min-width: 768px) {
+      left: -500px;
+    }
+  }
+
+  .modal.left.fade.in .modal-dialog {
+    left: 0;
+  }
+
+  /*Right*/
+  .modal.right.fade .modal-dialog {
+    right: -320px;
+    transition: opacity 0.3s linear, right 0.3s ease-out;
+    @media (min-width: 768px) {
+      right: -500px;
+    }
+  }
+
+  .modal.right.fade.in .modal-dialog {
+    right: 0;
+  }
+
+  &.dropdown.show {
+    #jx-header-account-link {
+      color: $brand-primary;
+    }
+  }
+  [data-off-canvas] {
+    @include media-breakpoint-up(lg) {
+      padding: 50px;
+    }
+  }
+}
+
+/*
+* @section      Style for login wrapper
+* @description  This section holds specific style redeclarations for
+*               login content wrapper
+*/
+
+#wrapper, #footer {
+  .jx-header-account-wrapper {
+    padding: 20px;
+    max-width: 100%;
+    margin-bottom: 30px;
+    background: #ffffff;
+    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, .2);
+    [class^="col-"], [class*=" col-"] {
+      width: 100%;
+      flex: 0 0 100%;
+      text-align: left;
+    }
+  }
+}

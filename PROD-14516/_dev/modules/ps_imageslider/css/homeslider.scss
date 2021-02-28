@@ -1,0 +1,178 @@
+#ps-image-slider {
+  figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 19%;
+    right: 45%;
+    font-size: 16px;
+    line-height: 1.62;
+  }
+
+  h1, .h1 {
+    display: block;
+    font-family: $font-family-secondary;
+    font-size: 90px;
+    line-height: 0.9;
+    padding-bottom: 10px;
+    letter-spacing: 0;
+    text-transform: none;
+    margin-bottom: 0;
+  }
+
+  h3, .h3 {
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  .btn {
+    margin-top: 10px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  * + p {
+    margin-top: 30px;
+  }
+
+  .swiper-slide > a:hover {
+    color: inherit;
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    display: inline-block;
+    top: 67%;
+    width: 60px;
+    height: 60px;
+    font-style: normal;
+    vertical-align: middle;
+    border-radius: 50%;
+    background-color: $white;
+    &:before {
+      display: inline-block;
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 15px;
+      height: auto;
+      margin-left: -8px;
+      margin-top: -1px;
+      border-bottom: 2px solid;
+    }
+    &:after {
+      display: inline-block;
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 11px;
+      height: 11px;
+      border-top: 2px solid;
+      margin-top: -1px;
+    }
+    &:hover {
+      color: $white;
+      background-color: $brand-primary;
+    }
+  }
+  .swiper-button-prev {
+    left: auto;
+    right: 19.5%;
+    margin-right: 10px;
+    &:after {
+      left: 50%;
+      margin-left: -2px;
+      border-left: 2px solid;
+      transform: rotate(-45deg) translateY(-58%);
+    }
+  }
+  .swiper-button-next {
+    right: auto;
+    left: 80.5%;
+    margin-left: 10px;
+    &:after {
+      right: 50%;
+      margin-right: -2px;
+      border-right: 2px solid;
+      transform: rotate(45deg) translateY(-58%);
+    }
+  }
+  .swiper-pagination {
+    position: absolute;
+    left: 21%;
+    bottom: 14%;
+    width: auto;
+    .swiper-pagination-bullet {
+      margin-left: 8px;
+      margin-right: 8px;
+      &:before {
+        background: $white;
+      }
+      &:hover, &.swiper-pagination-bullet-active {
+        border-color: $white;
+      }
+    }
+  }
+
+  @media (max-width: 1649px) {
+    figcaption {
+      left: 10%;
+    }
+    h1, .h1 {
+      font-size: 70px;
+    }
+    h3, .h3 {
+      font-size: 24px;
+    }
+    * + p {
+      margin-top: 15px;
+    }
+    .swiper-button-next, .swiper-button-prev {
+      top: 80%;
+    }
+    .swiper-button-prev {
+      right: 15%;
+    }
+    .swiper-button-next {
+      left: 85%;
+    }
+    .swiper-pagination {
+      left: 12%;
+      bottom: 8%;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    figcaption {
+      left: 4%;
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    h1, .h1 {
+      font-size: 38px;
+    }
+    h3, .h3 {
+      font-size: 16px;
+    }
+    .swiper-pagination {
+      display: none;
+    }
+    .swiper-button-next, .swiper-button-prev {
+      width: 35px;
+      height: 35px;
+    }
+    .swiper-button-prev {
+      margin-right: 5px;
+    }
+    .swiper-button-next {
+      margin-left: 5px;
+    }
+  }
+}

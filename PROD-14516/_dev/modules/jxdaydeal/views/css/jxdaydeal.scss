@@ -1,0 +1,236 @@
+.daydeal-box {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  color: $brand-primary;
+  h3 {
+    display: none;
+  }
+  > div {
+    display: flex;
+    > span {
+      display: block;
+      & + span {
+        margin-left: 6px;
+      }
+      > span {
+        display: inline-block;
+        overflow: hidden;
+        font-size: 10px;
+        letter-spacing: 10px;
+        font-weight: normal;
+        text-overflow: clip;
+        width: 11px;
+        padding-bottom: 2px;
+        text-transform: uppercase;
+        color: $gray-800;
+        vertical-align: bottom;
+      }
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 18px;
+    > div > span {
+      & + span {
+        margin-left: 8px;
+      }
+      > span {
+        font-size: 12px;
+        width: 15px;
+      }
+    }
+  }
+}
+
+.daydeal-products {
+  background: #7d868f;
+  .product {
+    background: radial-gradient(ellipse at center, #7d868f 0%, #78818a 32%, #6e757f 100%);
+    background-size: 179% 510%;
+    background-position: 27% 38%;
+    .container {
+      display: flex;
+      position: relative;
+      align-items: center;
+      overflow: hidden;
+      padding-top: 20px;
+      padding-bottom: 40px;
+      min-height: 235px;
+    }
+    .product-info {
+      flex: 0 0 50%;
+      max-width: 50%;
+      @include media-breakpoint-up(xl) {
+        padding-left: 9%;
+      }
+    }
+    .product-thumb {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 50%;
+    }
+  }
+
+  .label-daydeal {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: $gray-300;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  h1 {
+    font-family: $font-family-primary;
+    font-weight: 300;
+    color: $white;
+    @include media-breakpoint-down(sm) {
+      font-size: 26px;
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: 20px;
+    }
+  }
+
+  .btn {
+    margin-top: 20px;
+  }
+
+  .daydeal-box {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1;
+    color: $white;
+    margin-top: 20px;
+    > div > span {
+      position: relative;
+      & + span {
+        margin-left: 4px;
+        padding-left: 14px;
+        &:before {
+          content: ':';
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+      > span {
+        display: block;
+        font-size: 10px;
+        letter-spacing: 0;
+        font-weight: normal;
+        width: auto;
+        padding-left: 2px;
+        text-transform: none;
+        color: $gray-400;
+      }
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+  .daydeal-pagination {
+    position: absolute;
+    left: 35%;
+    bottom: 3%;
+    width: auto;
+    z-index: 1;
+    transform: translateX(-50%);
+    .swiper-pagination-bullet {
+      &:before {
+        background: $white;
+      }
+      &:hover, &.swiper-pagination-bullet-active {
+        border-color: $white;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .product {
+      .container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        min-height: 300px;
+      }
+    }
+    .label-daydeal {
+      font-size: 14px;
+    }
+    .daydeal-box {
+      font-size: 40px;
+      margin-top: 20px;
+      > div > span {
+        & + span {
+          margin-left: 7px;
+          padding-left: 18px;
+        }
+        > span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .product .container {
+      min-height: 400px;
+    }
+    .label-daydeal {
+      font-size: 16px;
+    }
+    .daydeal-box {
+      font-size: 50px;
+      margin-top: 33px;
+      > div > span {
+        & + span {
+          margin-left: 15px;
+          padding-left: 30px;
+        }
+        > span {
+          font-size: 12px;
+        }
+      }
+    }
+    .btn {
+      margin-top: 37px;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .product {
+      .container {
+        min-height: 600px;
+      }
+      .product-info {
+        padding-left: 5%;
+      }
+    }
+    .daydeal-box {
+      font-size: 70px;
+      margin-top: 33px;
+      > div > span {
+        & + span {
+          margin-left: 30px;
+          padding-left: 50px;
+        }
+        > span {
+          font-size: 14px;
+          margin-top: 5px;
+        }
+      }
+    }
+    .daydeal-pagination {
+      .swiper-pagination-bullet {
+        margin-left: 14px;
+        margin-right: 14px;
+      }
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    .product .product-info {
+      padding-left: 9%;
+    }
+  }
+}
